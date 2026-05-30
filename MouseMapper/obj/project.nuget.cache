@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "PFpXi9259Iw=",
+  "success": true,
+  "projectFilePath": "E:\\AI\\Claude Code\\MouseMapper\\MouseMapper\\MouseMapper.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\leafq\\.nuget\\packages\\nefarius.vigem.client\\1.21.256\\nefarius.vigem.client.1.21.256.nupkg.sha512"
+  ],
+  "logs": []
+}

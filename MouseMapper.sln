@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MouseMapper", "MouseMapper\MouseMapper.csproj", "{9FD8975E-E223-4A33-9340-99C426440238}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MouseMapper.Tests", "MouseMapper.Tests\MouseMapper.Tests.csproj", "{074C047A-36BA-4EB0-AFB5-81A9D7E8B300}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9FD8975E-E223-4A33-9340-99C426440238}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FD8975E-E223-4A33-9340-99C426440238}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FD8975E-E223-4A33-9340-99C426440238}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FD8975E-E223-4A33-9340-99C426440238}.Release|Any CPU.Build.0 = Release|Any CPU
+		{074C047A-36BA-4EB0-AFB5-81A9D7E8B300}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{074C047A-36BA-4EB0-AFB5-81A9D7E8B300}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{074C047A-36BA-4EB0-AFB5-81A9D7E8B300}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{074C047A-36BA-4EB0-AFB5-81A9D7E8B300}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,86 @@
+<Window x:Class="MouseMapper.Views.OsdWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        Topmost="True"
+        ShowInTaskbar="False"
+        ResizeMode="NoResize"
+        Width="220" Height="160">
+
+    <Window.Resources>
+        <SolidColorBrush x:Key="OsdBg" Color="#CC1A1A2E" />
+        <SolidColorBrush x:Key="OsdGreen" Color="#FF4ECDC4" />
+        <SolidColorBrush x:Key="OsdGray" Color="#FF555555" />
+        <SolidColorBrush x:Key="OsdText" Color="#FFFFFFFF" />
+    </Window.Resources>
+
+    <Grid>
+        <Border x:Name="DragHandle"
+                Height="16"
+                VerticalAlignment="Top"
+                Background="#44FFFFFF"
+                MouseLeftButtonDown="DragHandle_MouseLeftButtonDown" />
+
+        <Border Background="{StaticResource OsdBg}"
+                CornerRadius="6"
+                Margin="4,16,4,4"
+                Padding="10">
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="0,0,0,6">
+                    <Ellipse x:Name="ActiveDot" Width="8" Height="8" Fill="{StaticResource OsdGray}" Margin="0,0,6,0" />
+                    <TextBlock x:Name="StatusText" Text="INACTIVE" Foreground="{StaticResource OsdGray}"
+                               FontSize="11" FontFamily="Segoe UI" FontWeight="SemiBold" />
+                    <TextBlock x:Name="KeyHint" Text="  Press ~ to toggle"
+                               Foreground="{StaticResource OsdGray}" FontSize="10"
+                               FontFamily="Segoe UI" Margin="8,0,0,0" />
+                </StackPanel>
+
+                <Grid Grid.Row="1" Margin="0,4,0,4">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="52" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="40" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="STEER" Foreground="{StaticResource OsdText}"
+                               FontSize="10" VerticalAlignment="Center" />
+                    <Rectangle Grid.Column="1" Height="10" RadiusX="3" RadiusY="3"
+                               Fill="#33FFFFFF" Stroke="#55FFFFFF" StrokeThickness="0.5" />
+                    <Rectangle x:Name="SteeringFill" Grid.Column="1" Height="10" RadiusX="3" RadiusY="3"
+                               Fill="{StaticResource OsdGreen}" Width="50"
+                               HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    <TextBlock x:Name="SteeringText" Grid.Column="2" Text="0%"
+                               Foreground="{StaticResource OsdText}" FontSize="10"
+                               TextAlignment="Right" VerticalAlignment="Center" />
+                </Grid>
+
+                <Grid Grid.Row="2" Margin="0,4,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="52" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="40" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="THR" Foreground="{StaticResource OsdText}"
+                               FontSize="10" VerticalAlignment="Center" />
+                    <Rectangle Grid.Column="1" Height="10" RadiusX="3" RadiusY="3"
+                               Fill="#33FFFFFF" Stroke="#55FFFFFF" StrokeThickness="0.5" />
+                    <Rectangle x:Name="ThrottleFill" Grid.Column="1" Height="10" RadiusX="3" RadiusY="3"
+                               Fill="#FFFF6B6B" Width="0"
+                               HorizontalAlignment="Left" VerticalAlignment="Center" />
+                    <TextBlock x:Name="ThrottleText" Grid.Column="2" Text="0%"
+                               Foreground="{StaticResource OsdText}" FontSize="10"
+                               TextAlignment="Right" VerticalAlignment="Center" />
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>
